@@ -1,0 +1,19 @@
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "color";	<-- to fill a color
+ctx.fill();		<---to actually fill with a specific color
+ctx.stroke(); 		<---- to actually draw the path
+ctx.strokeStyle = "color"| gradient| pattern;	<---- to color|gradient|pattern the path
+ctx.beginPath();	<---- if we need to create a new path
+
+<----to draw line---->
+ctx.moveTo(startX, startY);
+ctx.lineTo(endX, endY);
+ 
+<----to draw rectangle---->
+ctx.fillRect(startX, startY, width, height);	//draws a filled rectangle
+ctx.strokeRect(startX, startY, width, height);	//only outline of the rectangle
+
+<----to draw circle---->
+ctx.arc(centerX, centerY, radius, startAngle, endAngle);

@@ -1,0 +1,144 @@
+<!-- 
+1. Page Load
+   |
+   ├── HTML elements are created
+   |
+   ├── scripts1.js is loaded
+   |
+   ├── Event listeners are attached
+
+2. generateRandomLevel()
+   |
+   ├── Random level is generated
+   |   |
+   |   ├── Random walls, targets, and boxes are placed
+   |   ├── Player character is placed
+   |
+   ├── resizeCanvas() is called
+
+3. resizeCanvas()
+   |
+   ├── Canvas size is adjusted to fit the window
+   |
+   ├── drawLevel() is called
+
+4. drawLevel()
+   |
+   ├── Game elements are drawn on the canvas
+   |
+   ├── Canvas displays the initial game state
+
+5. Player Interaction
+   |
+   ├── Buttons (or keyboard arrows) are clicked
+   |
+   ├── Functions like onKeyDown(), move(), and resetGrid() are called
+
+6. move()
+   |
+   ├── Player moves
+   |
+   ├── Game elements are updated
+   |
+   ├── drawLevel() is called
+
+7. checkLevelCompletion()
+   |
+   ├── Checks if the level is completed
+   |
+   ├── If completed, displays a "Congratulations" message
+
+8. Reset Button Click (resetGrid())
+   |
+   ├── The grid is reset to its initial state
+   |
+   ├── drawLevel() is called
+
+
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sokoban</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="left">
+      <canvas id="canvas"></canvas>
+      <img
+        id="sokoban"
+        src="./images/Character5.png"
+        alt="Player Character"
+        style="display: none"
+      />
+      <img
+        id="wallChar"
+        CrateDark_Yellow
+        src="./images/Wall_Brown.png"
+        alt="wall Character"
+        style="display: none"
+      />
+      <img
+        id="wallBorder"
+        CrateDark_Yellow
+        src="./images/Wall_Black.png"
+        alt="wall Character"
+        style="display: none"
+      />
+      <img
+        id="yellowCrate"
+        CrateDark_Yellow
+        src="./images/Crate_Yellow.png"
+        alt="wall Character"
+        style="display: none"
+      />
+      <img
+        id="beigeCrate"
+        CrateDark_Yellow
+        src="./images/Crate_Beige.png"
+        alt="wall Character"
+        style="display: none"
+      />
+      <img
+        id="grass"
+        CrateDark_Yellow
+        src="./images/texture-grass-field.jpg"
+        alt="wall Character"
+        style="display: none"
+      />
+      <img
+        id="target"
+        CrateDark_Yellow
+        src="./images/target.png"
+        alt="wall Character"
+        style="display: none"
+        
+      />
+    </div>
+    <div class="right">
+      <div class="heading"><h1>Sokoban Game</h1></div>
+      <div class="buttons">
+        <button class="lable-button" id="resetButton" onclick="resetGrid()">
+          Reset Grid
+        </button>
+        <button
+          class="lable-button"
+          id="newLevel"
+          onclick="generateRandomLevel();drawLevel();"
+        >
+          New Level
+        </button>
+      </div>
+      
+      
+      <div class="instruction">Use arrow keys to move😇</div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

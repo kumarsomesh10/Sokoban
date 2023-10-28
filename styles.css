@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #d3e3fc;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    /* height: 100%;
+    overflow: hidden; */
+}
+canvas {
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: scale(0.98);
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: 40px;
+}
+  
+.lable-button {
+    margin-top: 5%;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: #333333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+.lable-button:hover {
+    background-color: #202020;
+}
+
+.instruction{
+    margin-top: 50px;
+    font-size: 30px;
+}
